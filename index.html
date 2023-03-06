@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Single Price Grid Component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  Join our community
+  <main>
+    <h1 class="main__heading--sr-only">Single Price Grid Component</h1>
+    <section class="main__first-section">
+      <h2 class="first-section__title">Join our community</h2>
+      <p class="first-section__paragraph-green">30-day, hassle-free money back guarantee</p>
+      <p class="first-section__paragraph">Gain access to our full library of tutorials along with expert code reviews.
+        Perfect for any developers who are serious about honing their skills.</p>
+    </section>
 
-  30-day, hassle-free money back guarantee
+    <section class="main__second-section">
+      <h3 class="second-section__title">Monthly Subscription</h3>
+      <p class="second-section__price">&dollar;29 
+        <span class="price__span">per month</span>
+      </p>
+      <p class="second-section__paragraph">Full access for less than &dollar;1 a day</p>
+      <a class="second-section__signup" href="">Sign Up</a>
+    </section>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+    <section class="main__third-section">
+      <h3 class="third-section__title">Why Us</h3>
+      <ul role="list" class="third-section__list">
+        <li role="listitem">Tutorials by industry experts</li>
+        <li role="listitem">Peer &amp; expert code review</li>
+        <li role="listitem">Coding exercises</li>
+        <li role="listitem">Access to our GitHub repos</li>
+        <li role="listitem"> Community forum</li>
+        <li role="listitem">Flashcard decks</li>
+        <li role="listitem">New videos every week</li>
+      </ul>
+    </section>
+  </main>
 
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/YorkieLT">YorkieLT</a>.
     </p>
   </footer>
 </body>
+
 </html>
