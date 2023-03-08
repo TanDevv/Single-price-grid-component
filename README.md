@@ -82,4 +82,4 @@ This also gave me more grid practice as I did not want to use flex for much exce
 
 ## Author
 
-- Frontend Mentor - [@YorkieLT](https://www.frontendmentor.io/profile/YorkieLT)`
+- Frontend Mentor - [@YorkieLT](https://www.frontendmentor.io/profile/YorkieLT)
