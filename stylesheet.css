@@ -1,75 +1,261 @@
 :root {
-    --clr-primary-cyan: hsl(179, 62%, 43%);
-    --clr-primary-brightyellow: hsl(71, 73%, 54%);
+  --clr-primary-cyan: hsl(179, 62%, 43%);
+  --clr-primary-brightyellow: hsl(71, 73%, 54%);
 
-    --clr-neutral-lightgray: hsl(204, 43%, 93%);
-    --clr-neutral-grayblue: hsl(218, 22%, 67%);
+  --clr-neutral-lightgray: hsl(204, 43%, 93%);
+  --clr-neutral-grayblue: hsl(218, 22%, 67%);
+  --clr-neutral-white-opacity: hsla(0, 0%, 100%, 0.950);
 
-    --ff-karla: 'Karla', sans-serif;
-    --fw-standard-400: 400;
-    --fw-bold-700: 700;
+  --ff-karla: 'Karla', sans-serif;
+  --fw-standard-400: 400;
+  --fw-bold-700: 700;
+
+  
 }
+
 /* CSS Reset */
 
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*
+    10. Removes the default spacing and border for appropriate elements
+  */
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* !! H1 SCREEN READER ONLY !! */
+.main__heading--sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* General Styling */
+body {
+  background-color: var(--clr-neutral-lightgray);
+  color: hsl(0, 0%, 100%);
+
+  font-family: var(--ff-karla);
+  font-weight: var(--fw-standard-400);
+
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  margin: 1.5rem;
+  overflow: hidden;
+  max-width: 23rem;
+  border-radius: 5px;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, .1);
+}
+
+[class*="title"] {
+  color: var(--clr-neutral-white-opacity);
+
+}
+
+/* First Section Styling */
+
+.main__first-section {
+  background-color: hsl(0, 0%, 100%);
+  color: var(--clr-neutral-grayblue);
+  padding: 1.5rem;
+}
+
+.first-section__title {
+  color: var(--clr-primary-cyan);
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold-700);
+}
+
+.first-section__paragraph-green {
+  color: var(--clr-primary-brightyellow);
+  font-weight: var(--fw-bold-700);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.first-section__paragraph {
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  margin-top: 0.375rem;
+}
+
+/* Second Section Styling */
+
+.main__second-section {
+  background-color: var(--clr-primary-cyan);
+  color: var(--clr-neutral-lightgray);
+  padding: 1.5rem;
+}
+
+.second-section__price {
+  color: var(--clr-neutral-white-opacity);
+
+  font-weight: var(--fw-bold-700);
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: 0.875rem;
+}
+
+.price__span {
+  color: hsla(203, 44%, 93%, 0.6);
+
+  font-weight: var(--fw-standard-400);
+  font-size: 1rem;
+}
+
+.second-section__signup {
+  color: hsla(0, 0%, 100%, 0.9);
+  background-color: var(--clr-primary-brightyellow);
+
+  font-weight: var(--fw-bold-700);
+
+  display: block;
+  padding-top: 0.850rem;
+  padding-bottom: 0.850rem;
+  margin-top: 1.625rem;
+
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.09);
+  text-decoration: none;
+  text-align: center;
+}
+
+.second-section__signup:is(:hover) {
+  background-color: hsl(70deg 73% 47%);
+}
+
+/* Third Section Styling */
+
+.main__third-section {
+  background-color: hsla(179, 62%, 43%, 0.8);
+  color: var(--clr-neutral-lightgray);
+  padding: 1.5rem;
+}
+
+.third-section__list {
+  color: var(--clr-neutral-lightgray);
+  font-size: 0.875rem;
+  margin-top: 1.125rem;
+}
+
+/* Motion Preferences */
+@media (prefers-reduced-motion: no-preference) {
+  .second-section__signup {
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+      scroll-behavior: auto;
   }
 
-  
-
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+  *,
+  *::before,
+  *::after {
+      -webkit-animation-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+      animation-iteration-count: 1 !important;
+      -webkit-transition-duration: 0.01ms !important;
+      -o-transition-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
 }
-.attribution a {
-    color: hsl(228, 45%, 44%); 
-    }
